@@ -1,6 +1,5 @@
 package com.mapx.kosten.infocomarca;
 
-import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,8 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,7 +32,7 @@ public class MainActivity extends AppCompatActivity
 
         // toolbar
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("");
+        getSupportActionBar().setTitle("infoComarca");
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_reorder);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -67,8 +64,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch(menuItem.getItemId()) {
             case android.R.id.home:
                 mDrawLayout.openDrawer(GravityCompat.START);
                 return true;
@@ -76,7 +73,7 @@ public class MainActivity extends AppCompatActivity
                 Log.i(TAG, "Menu información");
                 return true;
         }
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(menuItem);
     }
 
     @Override

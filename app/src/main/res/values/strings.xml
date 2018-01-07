@@ -1,5 +1,10 @@
 <resources>
+    <string name="kosten_name">Kosten</string>
+    <string name="kosten_mail">kosten.mapx@gmail.com</string>
+    <string name="kosten_info">Desarrollo de aplicaciones móviles</string>
+
     <string name="app_name">infoComarca</string>
+    <string name="app_version">infoComarca V 0.20.0</string>
 
     <string name="Informacion">Información</string>
     <string name="Diarios">Diarios</string>
@@ -7,4 +12,7 @@
     <string name="Mareas">Mareas</string>
     <string name="Clima">Clima</string>
     <string name="Clasificados">Clasificados</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

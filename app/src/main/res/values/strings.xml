@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">infoComarca</string>
+
+    <string name="Informacion">Información</string>
+    <string name="Diarios">Diarios</string>
+    <string name="Radios">Radios</string>
+    <string name="Mareas">Mareas</string>
+    <string name="Clima">Clima</string>
+    <string name="Clasificados">Clasificados</string>
 </resources>

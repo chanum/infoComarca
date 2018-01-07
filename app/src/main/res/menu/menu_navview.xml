@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/menu_principal"
+            android:icon="@drawable/ic_action_ppal"
+            android:title="@string/app_name"/>
+        <item
+            android:id="@+id/menu_diarios"
+            android:icon="@drawable/ic_action_news"
+            android:title="@string/Diarios"/>
+        <item
+            android:id="@+id/menu_radios"
+            android:icon="@drawable/ic_action_radio"
+            android:title="@string/Radios"/>
+    </group>
+
+    <group
+        android:id="@+id/grp2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/menu_info"
+            android:icon="@drawable/ic_action_info"
+            android:title="@string/Informacion"/>
+    </group>
+
+</menu>
+

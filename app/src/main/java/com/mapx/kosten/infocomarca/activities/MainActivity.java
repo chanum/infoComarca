@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity
         mNavView.setCheckedItem(R.id.menu_principal);
         mNavView.setNavigationItemSelectedListener(this);
 
+        // set main fragment
+        changeFragment(new MainFragment(), "infoComarca");
     }
 
     @Override
@@ -52,21 +54,23 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.menu_principal:
-                //Log.i(TAG, "Menu Principal");
                 changeFragment(new MainFragment(), menuItem.getTitle().toString());
-                //menuItem.setChecked(true);
+                menuItem.setChecked(true);
                 break;
             case R.id.menu_diarios:
                 Log.i(TAG, "Menu Diarios");
+                menuItem.setChecked(true);
                 //changeFragment(new MainFragment(), menuItem.getTitle().toString());
                 break;
             case R.id.menu_radios:
                 //Log.i(TAG, "Menu Radios");
+                menuItem.setChecked(true);
                 //changeFragment(new MainFragment(), menuItem.getTitle().toString());
                 break;
             case R.id.menu_info:
                 //Log.i(TAG, "Menu Información");
                 changeFragment(new AboutFragment(), menuItem.getTitle().toString());
+                menuItem.setChecked(true);
                 break;
         }
         mDrawLayout.closeDrawers();
@@ -81,7 +85,6 @@ public class MainActivity extends AppCompatActivity
                 mDrawLayout.openDrawer(GravityCompat.START);
                 return true;
             case R.id.item_info:
-                //Log.i(TAG, "Menu información");
                 changeFragment(new AboutFragment(), menuItem.getTitle().toString());
                 return true;
         }

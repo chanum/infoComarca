@@ -4,7 +4,8 @@
     <string name="kosten_info">Desarrollo de aplicaciones móviles</string>
 
     <string name="app_name">infoComarca</string>
-    <string name="app_version">infoComarca V 0.20.0</string>
+    <string name="app_version">V 0.20.0</string>
+    <string name="app_lema">Toda la información de la Comarca Viedma - Patagones</string>
 
     <string name="Informacion">Información</string>
     <string name="Diarios">Diarios</string>

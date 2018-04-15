@@ -1,5 +1,6 @@
 package com.mapx.kosten.infocomarca.activities;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -7,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -37,16 +37,15 @@ public class MainActivity extends AppCompatActivity
 
         // toolbar
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("infoComarca");
+        getSupportActionBar().setTitle("infoPatagones");
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_reorder);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // navigation view
-        mNavView.setCheckedItem(R.id.menu_principal);
         mNavView.setNavigationItemSelectedListener(this);
 
         // set main fragment
-        changeFragment(new MainFragment(), "infoComarca");
+        changeFragment(new MainFragment(), "infoPatagones");
     }
 
     @Override
@@ -58,19 +57,18 @@ public class MainActivity extends AppCompatActivity
                 menuItem.setChecked(true);
                 break;
             case R.id.menu_diarios:
-                Log.i(TAG, "Menu Diarios");
-                menuItem.setChecked(true);
-                //changeFragment(new MainFragment(), menuItem.getTitle().toString());
+                //menuItem.setChecked(true);
+                Intent intent_news = new Intent(MainActivity.this, NewspaperActivity.class);
+                startActivity(intent_news);
                 break;
             case R.id.menu_radios:
-                //Log.i(TAG, "Menu Radios");
-                menuItem.setChecked(true);
-                //changeFragment(new MainFragment(), menuItem.getTitle().toString());
+                //menuItem.setChecked(true);
+                Intent intent_radio = new Intent(MainActivity.this, RadioActivity.class);
+                startActivity(intent_radio);
                 break;
             case R.id.menu_info:
-                //Log.i(TAG, "Menu Información");
                 changeFragment(new AboutFragment(), menuItem.getTitle().toString());
-                menuItem.setChecked(true);
+                //menuItem.setChecked(true);
                 break;
         }
         mDrawLayout.closeDrawers();

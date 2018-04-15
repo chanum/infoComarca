@@ -3,14 +3,11 @@ package com.mapx.kosten.infocomarca.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -51,11 +48,11 @@ public class MainFragment extends Fragment
 
         mItemList = new ArrayList<>();
 
-        mItemList.add(new itemList("Diarios", "-----", R.drawable.ic_action_news));
-        mItemList.add(new itemList("Radios", "-----", R.drawable.ic_action_radio));
-        mItemList.add(new itemList("Clima", "-----", R.drawable.ic_action_radio));
-        mItemList.add(new itemList("Mareas", "-----", R.drawable.ic_action_radio));
-        mItemList.add(new itemList("Clasificados", "-----", R.drawable.ic_action_radio));
+        mItemList.add(new itemList("Diarios", "-----", R.drawable.newspaper_128));
+        mItemList.add(new itemList("Radios", "-----", R.drawable.radio_128));
+        //mItemList.add(new itemList("Clima", "-----", R.drawable.ic_action_radio));
+        //mItemList.add(new itemList("Mareas", "-----", R.drawable.ic_action_radio));
+        //mItemList.add(new itemList("Clasificados", "-----", R.drawable.ic_action_radio));
 
         mAdapter = new listItemAdapter(mItemList);
         mRecyView.setAdapter(mAdapter);

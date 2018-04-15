@@ -1,5 +1,6 @@
 package com.mapx.kosten.infocomarca.activities;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -73,7 +74,11 @@ public class ItemsActivity extends AppCompatActivity
     }
 
     public void onItemClick(View view, int position) {
-        // TODO
+        Intent intent_item = new Intent(view.getContext(), WebActivity.class);
+        intent_item.putExtra("ItemsTitle", mItemsArray);
+        intent_item.putExtra("ItemPosition", position);
+        startActivity(intent_item);
+
     }
 
     // funcion que carga la lista de items desde arrays.xml

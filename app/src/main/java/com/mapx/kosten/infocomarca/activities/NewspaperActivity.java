@@ -24,7 +24,7 @@ public class NewspaperActivity extends AppCompatActivity {
 
         // toolbar
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("infoPatagones");
+        getSupportActionBar().setTitle("Diarios");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

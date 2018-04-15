@@ -24,7 +24,7 @@ public class RadioActivity extends AppCompatActivity {
 
         // toolbar
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("infoPatagones");
+        getSupportActionBar().setTitle("Radios");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

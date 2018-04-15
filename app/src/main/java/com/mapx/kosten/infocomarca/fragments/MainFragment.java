@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.mapx.kosten.infocomarca.CustomItemClickListener;
 import com.mapx.kosten.infocomarca.R;
 import com.mapx.kosten.infocomarca.activities.NewspaperActivity;
+import com.mapx.kosten.infocomarca.activities.RadioActivity;
 import com.mapx.kosten.infocomarca.adapters.listItemAdapter;
 import com.mapx.kosten.infocomarca.objects.itemList;
 
@@ -64,9 +65,18 @@ public class MainFragment extends Fragment
 
     public void onItemClick(View view, int position) {
 
-        Intent intent_newspaper = new Intent(view.getContext(), NewspaperActivity.class);
-        intent_newspaper.putExtra("ItemId", position);
-        view.getContext().startActivity(intent_newspaper);
+        switch (position) {
+            case 0:
+                Intent intent_newspaper = new Intent(view.getContext(), NewspaperActivity.class);
+                //intent_newspaper.putExtra("ItemId", position);
+                view.getContext().startActivity(intent_newspaper);
+                break;
+            case 1:
+                Intent intent_radio = new Intent(view.getContext(), RadioActivity.class);
+                //intent_radio.putExtra("ItemId", position);
+                view.getContext().startActivity(intent_radio);
+                break;
+        }
     }
 
 }

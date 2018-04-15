@@ -1,15 +1,13 @@
 package com.mapx.kosten.infocomarca.activities;
 
-import android.content.Intent;
 import android.content.res.TypedArray;
 import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -21,24 +19,21 @@ import com.mapx.kosten.infocomarca.objects.itemList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewspaperActivity extends AppCompatActivity
+public class ItemsActivity extends AppCompatActivity
         implements CustomItemClickListener {
 
-    private final String TAG = "NewspaperActivity";
+    private final String TAG = "ItemsActivity";
 
     // declaration of variables
     private Toolbar mToolbar;
     private LinearLayoutManager mLinearLayoutMgr;
     private RecyclerView mRecyView;
-    private List<itemList> mItemList;
-    private String[] mItemsName;
-    private String[] mItemsSubName;
-    private TypedArray mItemsImage;
+    private String mItemsArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newspaper);
+        setContentView(R.layout.activity_items);
 
         // instantiation of variables
         mToolbar = (Toolbar) findViewById(R.id.toolBarLayout_main);
@@ -46,7 +41,12 @@ public class NewspaperActivity extends AppCompatActivity
 
         // toolbar
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Diarios");
+
+        // obtenemos datos pasado por Activity previo
+        Bundle bundle = getIntent().getExtras();
+        mItemsArray = bundle.getString("ItemsTitle");
+
+        getSupportActionBar().setTitle(mItemsArray);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -57,7 +57,7 @@ public class NewspaperActivity extends AppCompatActivity
         mRecyView.setItemAnimator(new DefaultItemAnimator());
 
         // cargo lista de newspapers
-        loadItemsList();
+        loadItemsList(mItemsArray);
 
     }
 
@@ -77,26 +77,43 @@ public class NewspaperActivity extends AppCompatActivity
     }
 
     // funcion que carga la lista de items desde arrays.xml
-    public void loadItemsList() {
-        listItemAdapter mAdapter;
-        List<itemList> mItemList;
-        String[] mItemsName;
-        String[] mItemsSubName;
-        TypedArray mItemsImage;
+    public void loadItemsList(String itemsArray) {
+        boolean status;
+        listItemAdapter listAdapter;
+        List<itemList> itemsList;
+        String[] itemsName;
+        String[] itemsSubName;
+        TypedArray itemsImage;
 
-        mItemList = new ArrayList<>();
-
-        // cargo los campos de los Item almacenados en Values/array.xml
-        mItemsName = getResources().getStringArray(R.array.news_name);
-        mItemsSubName = getResources().getStringArray(R.array.news_url);
-        mItemsImage = getResources().obtainTypedArray(R.array.news_image);
-        for (int i=0; i < mItemsName.length; i++)  {
-            mItemList.add(new itemList(mItemsName[i], mItemsSubName[i], mItemsImage.getResourceId(i,-1)));
+        itemsList = new ArrayList<>();
+        status=true;
+        switch (itemsArray) {
+            case "Diarios":
+                // cargo los campos de los Item almacenados en Values/array.xml
+                itemsName = getResources().getStringArray(R.array.news_name);
+                itemsSubName = getResources().getStringArray(R.array.news_url);
+                itemsImage = getResources().obtainTypedArray(R.array.news_image);
+                for (int i=0; i < itemsName.length; i++)  {
+                    itemsList.add(new itemList(itemsName[i], itemsSubName[i], itemsImage.getResourceId(i,-1)));
+                }
+                break;
+            case "Radios":
+                // cargo los campos de los Item almacenados en Values/array.xml
+                itemsName = getResources().getStringArray(R.array.radio_name);
+                itemsSubName = getResources().getStringArray(R.array.radio_sub_name);
+                itemsImage = getResources().obtainTypedArray(R.array.radio_image);
+                for (int i=0; i < itemsName.length; i++)  {
+                    itemsList.add(new itemList(itemsName[i], itemsSubName[i], itemsImage.getResourceId(i,-1)));
+                }
+                break;
+            default:
+                status=false;
         }
 
-        mAdapter = new listItemAdapter(mItemList);
-        mRecyView.setAdapter(mAdapter);
-        mAdapter.setClickListener(this);
+        listAdapter = new listItemAdapter(itemsList);
+        mRecyView.setAdapter(listAdapter);
+        listAdapter.setClickListener(this);
     }
+
 
 }

@@ -46,15 +46,15 @@
 
     <!--- Arrays para Radio List (Nombre, Subtitulo e Imagen)  -->
     <array name="radio_name">
-        <item>Diarios</item>
-        <item>Radios</item>
+        <item>XXXXX</item>
+        <item>YYYYY</item>
     </array>
     <array name="radio_sub_name">
         <item>-----</item>
         <item>-----</item>
     </array>
     <array name="radio_image">
-        <item>@drawable/newspaper_128</item>
+        <item>@drawable/radio_128</item>
         <item>@drawable/radio_128</item>
     </array>
 

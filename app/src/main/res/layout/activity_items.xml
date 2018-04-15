@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.mapx.kosten.infocomarca.activities.NewspaperActivity">
+    tools:context="com.mapx.kosten.infocomarca.activities.ItemsActivity">
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:clickable="true"
-        tools:context=".activities.NewspaperActivity"
+        tools:context=".activities.ItemsActivityActivity"
         tools:showIn="@layout/activity_newspaper">
 
         <!-- Toolbar Layout -->
@@ -48,6 +48,3 @@
         app:menu="@menu/menu_navview" />
 
 </android.support.v4.widget.DrawerLayout>
-
-
-

@@ -58,12 +58,14 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.menu_diarios:
                 //menuItem.setChecked(true);
-                Intent intent_news = new Intent(MainActivity.this, NewspaperActivity.class);
+                Intent intent_news = new Intent(MainActivity.this, ItemsActivity.class);
+                intent_news.putExtra("ItemsTitle", "Diarios");
                 startActivity(intent_news);
                 break;
             case R.id.menu_radios:
                 //menuItem.setChecked(true);
-                Intent intent_radio = new Intent(MainActivity.this, RadioActivity.class);
+                Intent intent_radio = new Intent(MainActivity.this, ItemsActivity.class);
+                intent_radio.putExtra("ItemsTitle", "Radios");
                 startActivity(intent_radio);
                 break;
             case R.id.menu_info:

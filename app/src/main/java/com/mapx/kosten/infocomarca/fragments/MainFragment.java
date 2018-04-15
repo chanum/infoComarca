@@ -2,6 +2,7 @@ package com.mapx.kosten.infocomarca.fragments;
 
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -29,8 +30,6 @@ public class MainFragment extends Fragment
 
     private LinearLayoutManager mLinearLayoutMgr;
     private RecyclerView mRecyView;
-    private listItemAdapter mAdapter;
-    private List<itemList> mItemList;
 
     public MainFragment() {
         // Required empty public constructor
@@ -47,21 +46,13 @@ public class MainFragment extends Fragment
         mRecyView.setHasFixedSize(true);
         mRecyView.setItemAnimator(new DefaultItemAnimator());
 
-        mItemList = new ArrayList<>();
-
-        mItemList.add(new itemList("Diarios", "-----", R.drawable.newspaper_128));
-        mItemList.add(new itemList("Radios", "-----", R.drawable.radio_128));
-        //mItemList.add(new itemList("Clima", "-----", R.drawable.ic_action_radio));
-        //mItemList.add(new itemList("Mareas", "-----", R.drawable.ic_action_radio));
-        //mItemList.add(new itemList("Clasificados", "-----", R.drawable.ic_action_radio));
-
-        mAdapter = new listItemAdapter(mItemList);
-        mRecyView.setAdapter(mAdapter);
-        mAdapter.setClickListener(this);
+        // cargo lista de items
+        loadItemsList();
 
         // Inflate the layout for this fragment
         return view;
     }
+
 
     public void onItemClick(View view, int position) {
 
@@ -77,6 +68,29 @@ public class MainFragment extends Fragment
                 view.getContext().startActivity(intent_radio);
                 break;
         }
+    }
+
+    // funcion que carga la lista de items desde arrays.xml
+    public void loadItemsList() {
+        listItemAdapter mAdapter;
+        List<itemList> mItemList;
+        String[] mItemsName;
+        String[] mItemsSubName;
+        TypedArray mItemsImage;
+
+        mItemList = new ArrayList<>();
+
+        // cargo los campos de los Item almacenados en Values/array.xml
+        mItemsName = getResources().getStringArray(R.array.items_name);
+        mItemsSubName = getResources().getStringArray(R.array.items_sub_name);
+        mItemsImage = getResources().obtainTypedArray(R.array.items_image);
+        for (int i=0; i < mItemsName.length; i++)  {
+            mItemList.add(new itemList(mItemsName[i], mItemsSubName[i], mItemsImage.getResourceId(i,-1)));
+        }
+
+        mAdapter = new listItemAdapter(mItemList);
+        mRecyView.setAdapter(mAdapter);
+        mAdapter.setClickListener(this);
     }
 
 }

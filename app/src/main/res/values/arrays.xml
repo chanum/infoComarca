@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--- Arrays para Item List (Nombre, Subtitulo e Imagen)  -->
+    <array name="items_name">
+        <item>Diarios</item>
+        <item>Radios</item>
+    </array>
+    <array name="items_sub_name">
+        <item>-----</item>
+        <item>-----</item>
+    </array>
+    <array name="items_image">
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/radio_128</item>
+    </array>
+
+    <!--- Arrays para Newspaper List (Nombre, Url e Imagen)  -->
+    <array name="news_name">
+        <item>Noticias de la Costa</item>
+        <item>La Palabra</item>
+        <item>Viedma 24 Horas</item>
+        <item>Patagones a Diario</item>
+        <item>El Delitómetro</item>
+        <item>Mapuchito</item>
+        <item>Al Día</item>
+    </array>
+    <array name="news_url">
+        <item>http://www.noticiasnet.com.ar/</item>
+        <item>http://www.diariolapalabra.com.ar/</item>
+        <item>http://www.viedma24horas.com.ar/</item>
+        <item>http://www.patagonesadiario.com.ar/</item>
+        <item>http://eldelitometro.com.ar/</item>
+        <item>http://www.mapuchito.com/</item>
+        <item>http://diarioaldia.com.ar/</item>
+    </array>
+    <array name="news_image">
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+    </array>
+
+    <!--- Arrays para Radio List (Nombre, Subtitulo e Imagen)  -->
+    <array name="radio_name">
+        <item>Diarios</item>
+        <item>Radios</item>
+    </array>
+    <array name="radio_sub_name">
+        <item>-----</item>
+        <item>-----</item>
+    </array>
+    <array name="radio_image">
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/radio_128</item>
+    </array>
+
+</resources>

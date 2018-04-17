@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.ItemsActivity" />
-        <activity android:name=".activities.WebActivity"></activity>
+        <activity android:name=".activities.WebActivity" />
+        <activity android:name=".activities.AboutActivity"></activity>
     </application>
 
 </manifest>

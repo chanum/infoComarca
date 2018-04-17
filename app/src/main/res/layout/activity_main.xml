@@ -39,11 +39,8 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <!-- Fragments -->
-        <FrameLayout
-            android:id="@+id/content_frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <!-- Recycle View Cards -->
+        <include layout="@layout/recyview_item" />
 
     </LinearLayout>
 

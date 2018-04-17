@@ -67,7 +67,7 @@ public class WebActivity extends AppCompatActivity {
                 mUrl = getResources().getStringArray(R.array.news_url);
                 break;
             case "Radios":
-                mUrl = getResources().getStringArray(R.array.news_url);
+                mUrl = getResources().getStringArray(R.array.radio_url);
                 break;
             default:
                 //mUrl = getResources().getStringArray(R.array.url_local_array);

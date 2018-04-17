@@ -18,23 +18,44 @@
     <!--- Arrays para Newspaper List (Nombre, Url e Imagen)  -->
     <array name="news_name">
         <item>Noticias de la Costa</item>
-        <item>La Palabra</item>
-        <item>Viedma 24 Horas</item>
         <item>Patagones a Diario</item>
+        <item>Viedma 24 Horas</item>
         <item>El Delitómetro</item>
+        <item>La Palabra</item>
+        <item>LU15 Viedma</item>
         <item>Mapuchito</item>
         <item>Al Día</item>
+        <item>Kyrios Digital</item>
+        <item>Noticias RN</item>
+        <item>Nuevo Tiempo</item>
+        <item>Río Negro</item>
+        <item>La Nueva</item>
+        <item>La Brújula</item>
     </array>
     <array name="news_url">
         <item>http://www.noticiasnet.com.ar/</item>
-        <item>http://www.diariolapalabra.com.ar/</item>
-        <item>http://www.viedma24horas.com.ar/</item>
         <item>http://www.patagonesadiario.com.ar/</item>
+        <item>http://www.viedma24horas.com.ar/</item>
         <item>http://eldelitometro.com.ar/</item>
+        <item>http://www.diariolapalabra.com.ar/</item>
+        <item>https://lu15am.com.ar/</item>
         <item>http://www.mapuchito.com/</item>
         <item>http://diarioaldia.com.ar/</item>
+        <item>http://kyriosdigital.com.ar/</item>
+        <item>https://www.noticiasrionegro.com.ar/</item>
+        <item>http://nuevotiempo.info/</item>
+        <item>https://www.rionegro.com.ar/</item>
+        <item>http://www.lanueva.com/</item>
+        <item>http://labrujula24.com/</item>
     </array>
     <array name="news_image">
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
+        <item>@drawable/newspaper_128</item>
         <item>@drawable/newspaper_128</item>
         <item>@drawable/newspaper_128</item>
         <item>@drawable/newspaper_128</item>
@@ -46,14 +67,34 @@
 
     <!--- Arrays para Radio List (Nombre, Subtitulo e Imagen)  -->
     <array name="radio_name">
-        <item>XXXXX</item>
-        <item>YYYYY</item>
+        <item>LU15 Viedma</item>
+        <item>Radio Noticias</item>
+        <item>Encuentro</item>
+        <item>FM de la Costa</item>
+        <item>La Puntual</item>
+        <item>Patagonia</item>
     </array>
     <array name="radio_sub_name">
-        <item>-----</item>
-        <item>-----</item>
+        <item>AM LU15</item>
+        <item>FM 105.5</item>
+        <item>FM 103.9</item>
+        <item>FM 99.9</item>
+        <item>FM 97.1</item>
+        <item>FM 90.5</item>
+    </array>
+    <array name="radio_url">
+        <item>https://lu15am.com.ar/escucha-lu15-en-vivo/</item>
+        <item>http://www.noticiasnet.com.ar//RadioNoticias-105-5/reproductor/</item>
+        <item>http://radioencuentro.org.ar/radioenvivo/</item>
+        <item>https://www.fmdelacosta999.com.ar/</item>
+        <item>http://www.streaminglocucionar.com.ar/portal/?p=8201</item>
+        <item>http://radiopatagonia905.com.ar/#!</item>
     </array>
     <array name="radio_image">
+        <item>@drawable/radio_128</item>
+        <item>@drawable/radio_128</item>
+        <item>@drawable/radio_128</item>
+        <item>@drawable/radio_128</item>
         <item>@drawable/radio_128</item>
         <item>@drawable/radio_128</item>
     </array>

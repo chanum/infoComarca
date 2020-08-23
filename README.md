@@ -4,4 +4,4 @@ App con toda la información de la región y Comarca Carmen de Patagones(Buenos 
 
 # Screen Capture
 
-![](infopatagones.jpeg)
+![](infopatagones.png)
